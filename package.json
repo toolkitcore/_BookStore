@@ -1,0 +1,17 @@
+{
+  "name": "book-store",
+  "version": "1.0.0",
+  "description": "A microservice for book store",
+  "keywords": [
+    "Book",
+    "BookStore",
+    "E-commerce"
+  ],
+  "author": "Nguyen Xuan Nhan",
+  "license": "MIT",
+  "dependencies": {
+    "@commitlint/cli": "^18.6.1",
+    "@commitlint/config-conventional": "^18.6.2",
+    "husky": "^9.0.11"
+  }
+}
