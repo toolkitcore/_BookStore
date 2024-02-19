@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace BookStore.Persistence.Interceptors;
 
-public class DispatchDomainEventsInterceptor(IPublisher mediator) : SaveChangesInterceptor
+public sealed class DispatchDomainEventsInterceptor(IPublisher mediator) : SaveChangesInterceptor
 {
     public override InterceptionResult<int> SavingChanges(DbContextEventData eventData, InterceptionResult<int> result)
     {

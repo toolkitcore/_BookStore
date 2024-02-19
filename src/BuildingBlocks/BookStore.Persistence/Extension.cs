@@ -23,6 +23,7 @@ public static class Extensions
 
         services.AddScoped<IDbCommandInterceptor, TimingInterceptor>();
         services.AddScoped<ISaveChangesInterceptor, DispatchDomainEventsInterceptor>();
+        services.AddScoped<ISaveChangesInterceptor, AuditableEntityInterceptor>();
 
         services.AddDbContextPool<TDbContext>((sp, options) =>
         {
