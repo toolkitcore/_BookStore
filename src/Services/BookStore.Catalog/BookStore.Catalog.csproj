@@ -23,4 +23,12 @@
 		</ContainerEnvironmentVariable>
 	</ItemGroup>
 
+	<ItemGroup>
+	  <Folder Include="Endpoints\" />
+	  <Folder Include="Infrastructure\" />
+	  <Folder Include="Domain\" />
+	  <Folder Include="IntegrationEvents\" />
+	  <Folder Include="ViewModels\" />
+	</ItemGroup>
+
 </Project>

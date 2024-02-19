@@ -1,0 +1,24 @@
+apiVersion: dapr.io/v1alpha1
+kind: Component
+metadata:
+  name: sendmail
+  namespace: eshop
+spec:
+  type: bindings.smtp
+  version: v1
+  metadata:
+    - name: host
+      value: smtp
+    - name: port
+      value: 1025
+    - name: user
+      secretKeyRef:
+        name: Smtp.User
+        key: Smtp.User
+    - name: skipTLSVerify
+      value: true
+auth:
+  secretStore: secretstore
+scopes:
+  - ordering-api
+  - payment-api

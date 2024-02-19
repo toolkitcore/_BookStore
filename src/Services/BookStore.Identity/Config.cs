@@ -1,52 +1,124 @@
-﻿using Duende.IdentityServer.Models;
+﻿using Duende.IdentityServer;
+using Duende.IdentityServer.Models;
 
 namespace BookStore.Identity;
 
 public static class Config
 {
     public static IEnumerable<IdentityResource> IdentityResources =>
-        new IdentityResource[]
-        {
-            new IdentityResources.OpenId(),
-            new IdentityResources.Profile()
-        };
+    [
+        new IdentityResources.OpenId(),
+        new IdentityResources.Profile()
+    ];
 
     public static IEnumerable<ApiScope> ApiScopes =>
-        new ApiScope[]
-        {
-            new("scope1"),
-            new("scope2")
-        };
+    [
+        new("cart", "Access to Cart API"),
+        new("ordering", "Access to Ordering API"),
+        new("aggregator", "Access to Aggregator API"),
+        new("payment", "Access to Payment API")
+    ];
 
-    public static IEnumerable<Client> Clients =>
-        new Client[]
+    public static IEnumerable<ApiResource> ApiResources =>
+    [
+        new("cart-api", "Cart API")
         {
-            // m2m client credentials flow client
-            new()
+            Scopes = { "cart" }
+        },
+        new("ordering-api", "Ordering API")
+        {
+            Scopes = { "ordering" }
+        },
+        new("aggregator-api", "Aggregator API")
+        {
+            Scopes = { "aggregator" }
+        },
+        new("payment-api", "Payment API")
+        {
+            Scopes = { "payment" }
+        }
+    ];
+
+    public static IEnumerable<Client> Clients(IConfiguration configuration) =>
+    [
+        new()
+        {
+            ClientId = "website",
+            ClientName = "Website Front-end",
+            AllowedGrantTypes = GrantTypes.Code,
+            RequirePkce = true,
+            RequireClientSecret = false,
+            RequireConsent = false,
+            AllowedCorsOrigins = { configuration["WebsiteClientUrlExternal"] },
+            RedirectUris = { $"{configuration["WebsiteClientUrlExternal"]}/authentication/login-callback" },
+            PostLogoutRedirectUris =
             {
-                ClientId = "m2m.client",
-                ClientName = "Client Credentials Client",
-
-                AllowedGrantTypes = GrantTypes.ClientCredentials,
-                ClientSecrets = { new Secret("511536EF-F270-4058-80CA-1C89C192F69A".Sha256()) },
-
-                AllowedScopes = { "scope1" }
+                $"{configuration["WebsiteClientUrlExternal"]}/authentication/logout-callback"
             },
 
-            // interactive client using code flow + pkce
-            new()
+            AllowedScopes =
             {
-                ClientId = "interactive",
-                ClientSecrets = { new Secret("49C1A7E1-0C79-4A89-A3D6-A37998FB86B0".Sha256()) },
-
-                AllowedGrantTypes = GrantTypes.Code,
-
-                RedirectUris = { "https://localhost:44300/signin-oidc" },
-                FrontChannelLogoutUri = "https://localhost:44300/signout-oidc",
-                PostLogoutRedirectUris = { "https://localhost:44300/signout-callback-oidc" },
-
-                AllowOfflineAccess = true,
-                AllowedScopes = { "openid", "profile", "scope2" }
+                IdentityServerConstants.StandardScopes.OpenId,
+                IdentityServerConstants.StandardScopes.Profile,
+                "cart",
+                "ordering",
+                "aggregator",
+                "payment"
+            },
+        },
+        new()
+        {
+            ClientId = "cartswaggerui",
+            ClientName = "Cart Swagger UI",
+            AllowedGrantTypes = GrantTypes.Implicit,
+            AllowAccessTokensViaBrowser = true,
+            RedirectUris = { $"{configuration["CartApiUrlExternal"]}/swagger/oauth2-redirect.html" },
+            PostLogoutRedirectUris = { $"{configuration["CartApiUrlExternal"]}/swagger/" },
+            AllowedScopes =
+            {
+                "cart"
             }
-        };
+        },
+        new()
+        {
+            ClientId = "orderingswaggerui",
+            ClientName = "Ordering Swagger UI",
+            AllowedGrantTypes = GrantTypes.Implicit,
+            AllowAccessTokensViaBrowser = true,
+            RedirectUris = { $"{configuration["OrderingApiUrlExternal"]}/swagger/oauth2-redirect.html" },
+            PostLogoutRedirectUris = { $"{configuration["OrderingApiUrlExternal"]}/swagger/" },
+            AllowedScopes =
+            {
+                "ordering"
+            }
+        },
+        new()
+        {
+            ClientId = "aggregatorswaggerui",
+            ClientName = "Aggregator Swagger UI",
+            AllowedGrantTypes = GrantTypes.Implicit,
+            AllowAccessTokensViaBrowser = true,
+            RedirectUris = { $"{configuration["AggregatorApiUrlExternal"]}/swagger/oauth2-redirect.html" },
+            PostLogoutRedirectUris = { $"{configuration["AggregatorApiUrlExternal"]}/swagger/" },
+            AllowedScopes =
+            {
+                "cart",
+                "payment",
+                "aggregator"
+            }
+        },
+        new()
+        {
+            ClientId = "paymentswaggerui",
+            ClientName = "Payment Swagger UI",
+            AllowedGrantTypes = GrantTypes.Implicit,
+            AllowAccessTokensViaBrowser = true,
+            RedirectUris = { $"{configuration["PaymentApiUrlExternal"]}/swagger/oauth2-redirect.html" },
+            PostLogoutRedirectUris = { $"{configuration["PaymentApiUrlExternal"]}/swagger/" },
+            AllowedScopes =
+            {
+                "payment"
+            }
+        }
+    ];
 }

@@ -22,8 +22,6 @@ try
         .ConfigureServices()
         .ConfigurePipeline();
 
-    // this seeding is only for the template to bootstrap the DB and users.
-    // in production you will likely want a different approach.
     if (args.Contains("/seed"))
     {
         Log.Information("Seeding database...");
@@ -35,10 +33,7 @@ try
     app.Run();
 }
 catch (Exception ex) when (
-    // https://github.com/dotnet/runtime/issues/60600
     ex.GetType().Name is not "StopTheHostException"
-    // HostAbortedException was added in .NET 7, but since we target .NET 6 we
-    // need to do it this way until we target .NET 8
     && ex.GetType().Name is not "HostAbortedException"
 )
 {
