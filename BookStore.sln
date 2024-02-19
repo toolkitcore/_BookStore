@@ -19,27 +19,27 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookStore.Core", "src\Build
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{1C68F134-1BBC-47C1-A9A3-337E5C3A8382}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookStore.Identity", "src\Services\BookStore.Identity\BookStore.Identity.csproj", "{43BD7861-1F89-4043-B5D1-36C6918DA3FD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookStore.Identity", "src\Services\BookStore.Identity\BookStore.Identity.csproj", "{43BD7861-1F89-4043-B5D1-36C6918DA3FD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookStore.Catalog", "src\Services\BookStore.Catalog\BookStore.Catalog.csproj", "{8339FE61-96EB-419A-A89A-937643D4D8BC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookStore.Catalog", "src\Services\BookStore.Catalog\BookStore.Catalog.csproj", "{8339FE61-96EB-419A-A89A-937643D4D8BC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookStore.Payment", "src\Services\BookStore.Payment\BookStore.Payment.csproj", "{1F01FC4B-954E-4C06-A6F1-EC885E10A871}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookStore.Payment", "src\Services\BookStore.Payment\BookStore.Payment.csproj", "{1F01FC4B-954E-4C06-A6F1-EC885E10A871}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookStore.Ordering", "src\Services\BookStore.Ordering\BookStore.Ordering.csproj", "{447E7C89-F39D-4852-9014-7241C16C72B5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookStore.Ordering", "src\Services\BookStore.Ordering\BookStore.Ordering.csproj", "{447E7C89-F39D-4852-9014-7241C16C72B5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookStore.Cart", "src\Services\BookStore.Cart\BookStore.Cart.csproj", "{ABA5C928-C777-4FFD-94BD-E9F6CFE4948C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookStore.Cart", "src\Services\BookStore.Cart\BookStore.Cart.csproj", "{ABA5C928-C777-4FFD-94BD-E9F6CFE4948C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookStore.Searching", "src\Services\BookStore.Searching\BookStore.Searching.csproj", "{B04C4AF9-4845-4DB1-9A74-C4FC855D3A35}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookStore.Searching", "src\Services\BookStore.Searching\BookStore.Searching.csproj", "{B04C4AF9-4845-4DB1-9A74-C4FC855D3A35}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{E1751CF4-3F53-454F-9F7B-F5D919149FC1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookStore.Website", "src\Web\BookStore.Website\BookStore.Website\BookStore.Website.csproj", "{00E925ED-BEBA-45E6-A5D9-4B3C67297F04}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookStore.Website", "src\Web\BookStore.Website\BookStore.Website\BookStore.Website.csproj", "{00E925ED-BEBA-45E6-A5D9-4B3C67297F04}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookStore.Website.Client", "src\Web\BookStore.Website\BookStore.Website.Client\BookStore.Website.Client.csproj", "{36F94334-62A9-4B54-8136-F6D1C7498E46}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookStore.Website.Client", "src\Web\BookStore.Website\BookStore.Website.Client\BookStore.Website.Client.csproj", "{36F94334-62A9-4B54-8136-F6D1C7498E46}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookStore.WebStatus", "src\Web\BookStore.WebStatus\BookStore.WebStatus.csproj", "{1133B055-D0DA-478E-888B-AAEB5236435C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookStore.WebStatus", "src\Web\BookStore.WebStatus\BookStore.WebStatus.csproj", "{1133B055-D0DA-478E-888B-AAEB5236435C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookStore.Contracts", "src\BuildingBlocks\BookStore.Contracts\BookStore.Contracts.csproj", "{7602679B-8E5A-4BFF-84F4-C45728213850}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookStore.Contracts", "src\BuildingBlocks\BookStore.Contracts\BookStore.Contracts.csproj", "{7602679B-8E5A-4BFF-84F4-C45728213850}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

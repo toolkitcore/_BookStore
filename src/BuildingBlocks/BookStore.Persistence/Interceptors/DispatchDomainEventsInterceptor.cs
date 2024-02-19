@@ -21,7 +21,7 @@ public class DispatchDomainEventsInterceptor(IPublisher mediator) : SaveChangesI
 
     public async Task DispatchDomainEvents(DbContext? context)
     {
-        if (context == null) return;
+        if (context is null) return;
 
         var entities = context.ChangeTracker
             .Entries<EntityBase>()

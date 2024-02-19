@@ -6,6 +6,7 @@ using MediatR;
 using Microsoft.EntityFrameworkCore.Diagnostics;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 
 namespace BookStore.Persistence;
 
@@ -37,6 +38,11 @@ public static class Extensions
 
             options.AddInterceptors(sp.GetServices<IDbCommandInterceptor>());
             options.AddInterceptors(sp.GetServices<ISaveChangesInterceptor>());
+
+            if (string.Equals(Environments.Development, Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT"),
+                    StringComparison.OrdinalIgnoreCase))
+                options.EnableDetailedErrors()
+                    .EnableSensitiveDataLogging();
 
             doMoreDbContextOptionsConfigure?.Invoke(options);
         });

@@ -14,9 +14,4 @@
 		<PackageReference Include="Ardalis.Specification" Version="8.0.0" />
 	</ItemGroup>
 
-	<ItemGroup>
-	  <Folder Include="CQRS\" />
-	  <Folder Include="Helpers\" />
-	</ItemGroup>
-
 </Project>

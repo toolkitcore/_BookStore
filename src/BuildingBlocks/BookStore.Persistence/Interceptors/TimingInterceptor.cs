@@ -2,10 +2,11 @@
 using System.Diagnostics;
 using System.Text;
 using Microsoft.EntityFrameworkCore.Diagnostics;
+using Microsoft.Extensions.Logging;
 
 namespace BookStore.Persistence.Interceptors;
 
-public sealed class TimingInterceptor : DbCommandInterceptor
+public sealed class TimingInterceptor(ILogger<TimingInterceptor> logger) : DbCommandInterceptor
 {
     private readonly Stopwatch _stopwatch = new();
     private const long MaxAllowedExecutionTime = 5000;
@@ -25,6 +26,7 @@ public sealed class TimingInterceptor : DbCommandInterceptor
         InterceptionResult<DbDataReader> result,
         CancellationToken cancellationToken = default)
     {
+        logger.LogInformation("Executing query: {Query}", command.CommandText);
         _stopwatch.Stop();
         var executionTime = _stopwatch.ElapsedMilliseconds;
 
