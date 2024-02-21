@@ -5,6 +5,6 @@ namespace BookStore.Catalog.ViewModels;
 public sealed record AuthorViewModel(
     Guid Id,
     string Name,
-    string ShortBio,
-    AuthorContact AuthorContact
+    string? ShortBio,
+    AuthorContact? AuthorContact
 );

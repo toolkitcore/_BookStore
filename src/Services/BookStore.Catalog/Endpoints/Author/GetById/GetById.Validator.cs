@@ -1,6 +1,12 @@
-﻿namespace BookStore.Catalog.Endpoints.Author.GetById;
+﻿using FastEndpoints;
+using FluentValidation;
 
-public class GetByIdValidator
+namespace BookStore.Catalog.Endpoints.Author.GetById;
+
+public sealed class GetByIdValidator : Validator<GetAuthorByIdRequest>
 {
-    
+    public GetByIdValidator()
+    {
+        RuleFor(x => x.AuthorId).NotEmpty();
+    }
 }

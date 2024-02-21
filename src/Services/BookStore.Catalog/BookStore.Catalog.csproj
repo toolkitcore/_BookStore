@@ -28,8 +28,17 @@
 	<ItemGroup>
 	  <Folder Include="Domain\CategoryAggregate\Specifications\" />
 	  <Folder Include="Domain\PublisherAggregate\Specifications\" />
-	  <Folder Include="Endpoints\Category\" />
-	  <Folder Include="Endpoints\Publisher\" />
+	  <Folder Include="Endpoints\Author\Delete\" />
+	  <Folder Include="Endpoints\Author\Update\" />
+	  <Folder Include="Endpoints\Book\Create\" />
+	  <Folder Include="Endpoints\Book\Delete\" />
+	  <Folder Include="Endpoints\Book\Update\" />
+	  <Folder Include="Endpoints\Category\Create\" />
+	  <Folder Include="Endpoints\Category\Delete\" />
+	  <Folder Include="Endpoints\Category\Update\" />
+	  <Folder Include="Endpoints\Publisher\Create\" />
+	  <Folder Include="Endpoints\Publisher\Delete\" />
+	  <Folder Include="Endpoints\Publisher\Update\" />
 	  <Folder Include="Features\Category\Commands\" />
 	  <Folder Include="Features\Category\Queries\" />
 	  <Folder Include="Features\Publisher\Commands\" />

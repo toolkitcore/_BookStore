@@ -3,6 +3,7 @@ using Microsoft.Extensions.Configuration;
 using Serilog.Exceptions;
 using Serilog.Settings.Configuration;
 using Serilog;
+using Microsoft.Extensions.Logging;
 
 namespace BookStore.Infrastructure.Logging;
 
@@ -12,6 +13,8 @@ public static class Extension
     {
         var serilogOptions = new SerilogOptions();
         builder.Configuration.GetSection(sectionName).Bind(serilogOptions);
+
+        builder.Logging.ClearProviders();
 
         builder.Host.UseSerilog((context, config) =>
         {
