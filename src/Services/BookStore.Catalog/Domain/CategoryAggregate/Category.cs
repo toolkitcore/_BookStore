@@ -1,5 +1,6 @@
 ﻿using Ardalis.GuardClauses;
 using BookStore.Catalog.Domain.BookAggregate;
+using BookStore.Catalog.Domain.CategoryAggregate.Events;
 using BookStore.Core.SharedKernel;
 using System.Text.Json.Serialization;
 
@@ -15,4 +16,7 @@ public sealed class Category(string name, string? description, Guid? parentCateg
     public ICollection<Category> ChildrenCategories { get; set; } = [];
     public ICollection<Book> Books { get; set; } = [];
     public ICollection<BookCategory> BookCategories { get; set; } = [];
+
+    public void LinkCategoryToBook(Guid bookId, List<Guid> categoryId)
+        => RegisterDomainEvent(new CategoryLinkedToBookEvent(bookId, categoryId));
 }

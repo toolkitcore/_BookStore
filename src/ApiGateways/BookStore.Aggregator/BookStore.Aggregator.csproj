@@ -30,4 +30,8 @@
 	  <Folder Include="Services\" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <ProjectReference Include="..\..\BuildingBlocks\BookStore.Infrastructure\BookStore.Infrastructure.csproj" />
+	</ItemGroup>
+
 </Project>

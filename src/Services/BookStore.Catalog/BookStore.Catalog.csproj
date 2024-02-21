@@ -26,23 +26,16 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="Domain\BookAggregate\Specifications\" />
-	  <Folder Include="Domain\CategoryAggregate\Events\" />
-	  <Folder Include="Domain\CategoryAggregate\Handler\" />
 	  <Folder Include="Domain\CategoryAggregate\Specifications\" />
-	  <Folder Include="Domain\PublisherAggregate\Events\" />
-	  <Folder Include="Domain\PublisherAggregate\Handler\" />
 	  <Folder Include="Domain\PublisherAggregate\Specifications\" />
 	  <Folder Include="Endpoints\Category\" />
 	  <Folder Include="Endpoints\Publisher\" />
-	  <Folder Include="Features\Author\Commands\" />
 	  <Folder Include="Features\Category\Commands\" />
 	  <Folder Include="Features\Category\Queries\" />
 	  <Folder Include="Features\Publisher\Commands\" />
 	  <Folder Include="Features\Publisher\Queries\" />
 	  <Folder Include="IntegrationEvents\Events\" />
 	  <Folder Include="IntegrationEvents\Handlers\" />
-	  <Folder Include="ViewModels\" />
 	</ItemGroup>
 
 	<ItemGroup>

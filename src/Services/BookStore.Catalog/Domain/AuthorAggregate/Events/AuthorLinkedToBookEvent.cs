@@ -2,7 +2,7 @@
 
 namespace BookStore.Catalog.Domain.AuthorAggregate.Events;
 
-public class AuthorLinkedToBookEvent(
+public sealed class AuthorLinkedToBookEvent(
     Guid bookId,
     List<Guid> authorIds,
     string? notes

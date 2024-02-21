@@ -23,4 +23,8 @@
 		</ContainerEnvironmentVariable>
 	</ItemGroup>
 
+	<ItemGroup>
+	  <ProjectReference Include="..\..\BuildingBlocks\BookStore.Persistence\BookStore.Persistence.csproj" />
+	</ItemGroup>
+
 </Project>

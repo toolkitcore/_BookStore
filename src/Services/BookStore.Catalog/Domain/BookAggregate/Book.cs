@@ -12,7 +12,7 @@ public sealed class Book(
     decimal price,
     string? pictureFileName,
     int availableStock,
-    Guid? publisherId) : AuditableEntityBase
+    Guid? publisherId) : AuditableEntityBase, IAggregateRoot
 {
     public string Title { get; set; } = Guard.Against.NullOrEmpty(title, nameof(title));
     public string? Description { get; set; } = description;

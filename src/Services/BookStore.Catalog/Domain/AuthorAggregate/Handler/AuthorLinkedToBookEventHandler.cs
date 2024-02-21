@@ -35,6 +35,6 @@ public sealed class AuthorLinkedToBookEventHandler(
                 return author;
             }));
 
-        await repository.UpdateRangeAsync(authors, cancellationToken);
+        await repository.UpdateRangeAsync( authors, cancellationToken);
     }
 }

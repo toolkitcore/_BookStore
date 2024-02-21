@@ -9,6 +9,7 @@
 	<ItemGroup>
 		<PackageReference Include="Scrutor" Version="4.2.2" />
 		<PackageReference Include="Dapr.AspNetCore" Version="1.12.0" />
+        <PackageReference Include="Mapster" Version="7.4.0" />
 		<PackageReference Include="FluentValidation" Version="11.9.0" />
 		<PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.9.0" />
 	</ItemGroup>
@@ -39,10 +40,6 @@
 
 	<ItemGroup>
 		<ProjectReference Include="..\BookStore.Core\BookStore.Core.csproj" />
-	</ItemGroup>
-
-	<ItemGroup>
-	  <Folder Include="Outbox\Abstractions\" />
 	</ItemGroup>
 
 </Project>
