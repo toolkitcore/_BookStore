@@ -1,12 +1,10 @@
-﻿using BookStore.Catalog.Features.Author.Commands.CreateAuthorCommand;
-
+﻿using BookStore.Catalog.UseCases.Author.Commands.CreateAuthorCommand;
 using FastEndpoints;
-
 using MediatR;
 
 namespace BookStore.Catalog.Endpoints.Author.Create;
 
-public class Create(ISender sender) : Endpoint<CreateAuthorRequest, CreateAuthorResponse>
+public sealed class Create(ISender sender) : Endpoint<CreateAuthorRequest, CreateAuthorResponse>
 {
     public override void Configure()
     {

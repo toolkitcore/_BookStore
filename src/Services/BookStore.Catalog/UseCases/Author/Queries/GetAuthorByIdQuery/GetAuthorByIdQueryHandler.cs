@@ -1,12 +1,14 @@
 ﻿using Ardalis.GuardClauses;
 using Ardalis.Result;
+
 using BookStore.Catalog.Infrastructure.Data;
 using BookStore.Catalog.ViewModels;
 using BookStore.Core.Abstractions;
 using BookStore.Persistence;
+
 using Mapster;
 
-namespace BookStore.Catalog.Features.Author.Queries.GetAuthorByIdQuery;
+namespace BookStore.Catalog.UseCases.Author.Queries.GetAuthorByIdQuery;
 
 public sealed class GetAuthorByIdQueryHandler(
     ILogger<GetAuthorByIdQueryHandler> logger,

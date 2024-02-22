@@ -1,11 +1,13 @@
 ﻿using Ardalis.GuardClauses;
 using Ardalis.Result;
+
 using BookStore.Catalog.Infrastructure.Data;
 using BookStore.Core.Abstractions;
 using BookStore.Persistence;
+
 using Mapster;
 
-namespace BookStore.Catalog.Features.Author.Commands.UpdateAuthorCommand;
+namespace BookStore.Catalog.UseCases.Author.Commands.UpdateAuthorCommand;
 
 public sealed class UpdateAuthorCommandHandler(
     ILogger<UpdateAuthorCommandHandler> logger,

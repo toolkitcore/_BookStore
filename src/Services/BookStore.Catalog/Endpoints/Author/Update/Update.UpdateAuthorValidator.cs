@@ -2,11 +2,11 @@
 using FastEndpoints;
 using FluentValidation;
 
-namespace BookStore.Catalog.Endpoints.Author.Create;
+namespace BookStore.Catalog.Endpoints.Author.Update;
 
-public class CreateAuthorValidator : Validator<CreateAuthorRequest>
+public sealed class UpdateBookValidator : AbstractValidator<UpdateBookRequest>
 {
-    public CreateAuthorValidator()
+    public UpdateBookValidator()
     {
         RuleFor(x => x.Name)
             .NotEmpty()
@@ -20,7 +20,7 @@ public class CreateAuthorValidator : Validator<CreateAuthorRequest>
     }
 }
 
-public class AuthorContactValidator : Validator<AuthorContact>
+public sealed class AuthorContactValidator : Validator<AuthorContact>
 {
     public AuthorContactValidator()
     {

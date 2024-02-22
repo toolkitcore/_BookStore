@@ -1,5 +1,5 @@
 ﻿using Ardalis.Result;
-using BookStore.Catalog.Features.Author.Queries.GetAuthorByIdQuery;
+using BookStore.Catalog.UseCases.Author.Queries.GetAuthorByIdQuery;
 using FastEndpoints;
 using MediatR;
 

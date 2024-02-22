@@ -1,10 +1,12 @@
 ﻿using Ardalis.Result;
+
 using BookStore.Catalog.Infrastructure.Data;
 using BookStore.Core.Abstractions;
 using BookStore.Persistence;
+
 using Mapster;
 
-namespace BookStore.Catalog.Features.Author.Commands.CreateAuthorCommand;
+namespace BookStore.Catalog.UseCases.Author.Commands.CreateAuthorCommand;
 
 public sealed class CreateAuthorCommandHandler(
     ILogger<CreateAuthorCommandHandler> logger,

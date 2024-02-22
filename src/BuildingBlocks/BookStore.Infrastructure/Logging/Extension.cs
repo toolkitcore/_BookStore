@@ -1,9 +1,9 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Logging;
 using Serilog.Exceptions;
 using Serilog.Settings.Configuration;
 using Serilog;
-using Microsoft.Extensions.Logging;
 
 namespace BookStore.Infrastructure.Logging;
 

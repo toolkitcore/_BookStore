@@ -1,12 +1,12 @@
 ﻿using Ardalis.Result;
-using BookStore.Catalog.Features.Author.Queries.GetAuthorBooksQuery;
+using BookStore.Catalog.UseCases.Author.Queries.GetAuthorBooksQuery;
 using BookStore.Catalog.ViewModels;
 using FastEndpoints;
 using MediatR;
 
 namespace BookStore.Catalog.Endpoints.Author.GetBooks;
 
-public class GetBooks(ISender sender) : Endpoint<GetBooksRequest, GetBooksResponse>
+public sealed class GetBooks(ISender sender) : Endpoint<GetBooksRequest, GetBooksResponse>
 {
     public override void Configure()
     {

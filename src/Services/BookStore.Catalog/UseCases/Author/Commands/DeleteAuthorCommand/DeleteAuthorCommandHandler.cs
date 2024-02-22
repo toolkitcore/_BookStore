@@ -1,10 +1,11 @@
 ﻿using Ardalis.GuardClauses;
 using Ardalis.Result;
+
 using BookStore.Catalog.Infrastructure.Data;
 using BookStore.Core.Abstractions;
 using BookStore.Persistence;
 
-namespace BookStore.Catalog.Features.Author.Commands.DeleteAuthorCommand;
+namespace BookStore.Catalog.UseCases.Author.Commands.DeleteAuthorCommand;
 
 public sealed class DeleteAuthorCommandHandler(
     ILogger<DeleteAuthorCommandHandler> logger,

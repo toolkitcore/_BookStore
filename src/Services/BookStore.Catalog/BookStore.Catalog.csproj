@@ -28,8 +28,6 @@
 	<ItemGroup>
 	  <Folder Include="Domain\CategoryAggregate\Specifications\" />
 	  <Folder Include="Domain\PublisherAggregate\Specifications\" />
-	  <Folder Include="Endpoints\Author\Delete\" />
-	  <Folder Include="Endpoints\Author\Update\" />
 	  <Folder Include="Endpoints\Book\Create\" />
 	  <Folder Include="Endpoints\Book\Delete\" />
 	  <Folder Include="Endpoints\Book\Update\" />
@@ -39,10 +37,12 @@
 	  <Folder Include="Endpoints\Publisher\Create\" />
 	  <Folder Include="Endpoints\Publisher\Delete\" />
 	  <Folder Include="Endpoints\Publisher\Update\" />
-	  <Folder Include="Features\Category\Commands\" />
-	  <Folder Include="Features\Category\Queries\" />
-	  <Folder Include="Features\Publisher\Commands\" />
-	  <Folder Include="Features\Publisher\Queries\" />
+	  <Folder Include="UseCases\Book\Commands\" />
+	  <Folder Include="UseCases\Book\Queries\" />
+	  <Folder Include="UseCases\Category\Commands\" />
+	  <Folder Include="UseCases\Category\Queries\" />
+	  <Folder Include="UseCases\Publisher\Commands\" />
+	  <Folder Include="UseCases\Publisher\Queries\" />
 	  <Folder Include="IntegrationEvents\Events\" />
 	  <Folder Include="IntegrationEvents\Handlers\" />
 	</ItemGroup>
